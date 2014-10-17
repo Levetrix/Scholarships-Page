@@ -1,0 +1,536 @@
+@charset "IBM437";
+@CHARSET "ISO-8859-1";
+/* BYU Template Stylesheet
+* Last Updated: 22 Sep 2011
+* Written by: BYU Web Community
+* web.byu.edu 
+*/
+/*! normalize.css 2011-08-12T17:28 UTC · http://github.com/necolas/normalize.css */
+/* line 31, ../sass/main.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
+  display: block;
+}
+
+/* line 32, ../sass/main.scss */
+audio, canvas, video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+/* line 33, ../sass/main.scss */
+audio:not([controls]) {
+  display: none;
+}
+
+/* line 34, ../sass/main.scss */
+[hidden] {
+  display: none;
+}
+
+/* line 35, ../sass/main.scss */
+html {
+  font-size: 100%;
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/* line 36, ../sass/main.scss */
+body {
+  margin: 0;
+}
+
+/* line 37, ../sass/main.scss */
+body, button, input, select, textarea {
+  font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",sans-serif;
+}
+
+/* line 38, ../sass/main.scss */
+a:focus {
+  outline: thin dotted;
+}
+
+/* line 39, ../sass/main.scss */
+a:hover, a:active {
+  outline: 0;
+}
+
+/* line 40, ../sass/main.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/* line 41, ../sass/main.scss */
+b, strong {
+  font-weight: bold;
+}
+
+/* line 42, ../sass/main.scss */
+blockquote {
+  margin: 1em 40px;
+}
+
+/* line 43, ../sass/main.scss */
+dfn {
+  font-style: italic;
+}
+
+/* line 44, ../sass/main.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/* line 45, ../sass/main.scss */
+pre, code, kbd, samp {
+  font-family: monospace,serif;
+  _font-family: 'courier new',monospace;
+  font-size: 1em;
+}
+
+/* line 46, ../sass/main.scss */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* line 47, ../sass/main.scss */
+q {
+  quotes: none;
+}
+
+/* line 48, ../sass/main.scss */
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 49, ../sass/main.scss */
+small {
+  font-size: 75%;
+}
+
+/* line 50, ../sass/main.scss */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 51, ../sass/main.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 52, ../sass/main.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 53, ../sass/main.scss */
+ul, ol {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 54, ../sass/main.scss */
+dd {
+  margin: 0;
+}
+
+/* line 55, ../sass/main.scss */
+nav ul, nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+
+/* line 56, ../sass/main.scss */
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+
+/* line 57, ../sass/main.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* line 58, ../sass/main.scss */
+figure {
+  margin: 0;
+}
+
+/* line 59, ../sass/main.scss */
+form {
+  margin: 0;
+}
+
+/* line 60, ../sass/main.scss */
+fieldset {
+  margin: 0 2px;
+  padding: .35em .625em .75em;
+}
+
+/* line 61, ../sass/main.scss */
+legend {
+  border: 0;
+  *margin-left: -7px;
+}
+
+/* line 62, ../sass/main.scss */
+button, input, select, textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle;
+}
+
+/* line 63, ../sass/main.scss */
+button, input {
+  line-height: normal;
+  *overflow: visible;
+}
+
+/* line 64, ../sass/main.scss */
+table button, table input {
+  *overflow: auto;
+}
+
+/* line 65, ../sass/main.scss */
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+
+/* line 66, ../sass/main.scss */
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* line 67, ../sass/main.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/* line 68, ../sass/main.scss */
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* line 69, ../sass/main.scss */
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 70, ../sass/main.scss */
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+/* line 71, ../sass/main.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Text */
+/* line 75, ../sass/main.scss */
+body {
+  /*background: url("../img/body-bg.png") no-repeat scroll center 127px #fff;*/
+  background: url("../img/body-linen.png");
+  color: #444;
+  font: 13px/18px "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Helvetica,Arial,sans-serif;
+  *font-size: small;
+  min-width: 992px;
+}
+
+/* line 83, ../sass/main.scss */
+h1 {
+  font: bold 36px/36px "Palatino Linotype","Palatino",Times,"Times New Roman",serif;
+  margin: 18px 0;
+  color: #036;
+}
+
+/* line 84, ../sass/main.scss */
+h2 {
+  font: bold 24px/27px "Palatino Linotype","Palatino",Times,"Times New Roman",serif;
+  margin: 18px 0 9px;
+}
+
+/*h3 { font:bold 15px/18px Helvetica,Arial,sans-serif }*/
+/* line 86, ../sass/main.scss */
+h4 {
+  font: bold 13px/18px "Lucida Grande", "Lucida Sans", Helvetica, Arial, sans-serif;
+}
+
+/* line 87, ../sass/main.scss */
+h5 {
+  font: 13px/18px "Lucida Grande", "Lucida Sans", Helvetica, Arial, sans-serif;
+}
+
+/* line 88, ../sass/main.scss */
+h6 {
+  font: italic 13px/18px "Lucida Grande", "Lucida Sans", Helvetica, Arial, sans-serif;
+}
+
+/* line 89, ../sass/main.scss */
+h2, h3, h4, h5, h6 {
+  color: #444444;
+}
+
+/* line 90, ../sass/main.scss */
+h3, h4, h5, h6 {
+  margin: 9px 0;
+}
+
+/* line 91, ../sass/main.scss */
+h1 + h2, h3 + h4, h4 + h5, h5 + h6 {
+  margin-top: -9px;
+}
+
+/* line 92, ../sass/main.scss */
+body em {
+  font-style: italic;
+}
+
+/* line 93, ../sass/main.scss */
+body strong {
+  font-weight: bold;
+}
+
+/* line 94, ../sass/main.scss */
+body, select, input, textarea {
+  color: #444444;
+}
+
+/* line 95, ../sass/main.scss */
+p a {
+  text-decoration: underline;
+}
+
+/* line 96, ../sass/main.scss */
+p {
+  margin: 9px 0;
+}
+
+/* Lists */
+/* line 100, ../sass/main.scss */
+ul, ol {
+  margin-left: 1.5em;
+}
+
+/* line 101, ../sass/main.scss */
+ol {
+  list-style-type: decimal;
+  margin-left: 2em;
+}
+
+/* line 102, ../sass/main.scss */
+ol ol {
+  list-style-type: lower-alpha;
+}
+
+/* line 103, ../sass/main.scss */
+ol ol ol {
+  list-style-type: lower-roman;
+}
+
+/* line 104, ../sass/main.scss */
+ol ol ol ol {
+  list-style-type: decimal;
+}
+
+/* line 105, ../sass/main.scss */
+ol ol ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+/* line 106, ../sass/main.scss */
+ol ol ol ol ol ol {
+  list-style-type: lower-roman;
+}
+
+/* line 107, ../sass/main.scss */
+ul {
+  list-style-type: disc;
+  margin-left: 2em;
+}
+
+/* line 108, ../sass/main.scss */
+ul ul {
+  list-style-type: circle;
+}
+
+/* line 109, ../sass/main.scss */
+ul ul ul {
+  list-style-type: disc;
+}
+
+/* line 110, ../sass/main.scss */
+ul ul ul ul {
+  list-style-type: circle;
+}
+
+/* line 111, ../sass/main.scss */
+ul ul ul ul ul {
+  list-style-type: disc;
+}
+
+/* line 112, ../sass/main.scss */
+ul ul ul ul ul ul {
+  list-style-type: circle;
+}
+
+/* line 113, ../sass/main.scss */
+ul ul {
+  margin-top: .25em;
+  margin-bottom: .25em;
+}
+
+/* line 114, ../sass/main.scss */
+nav ul, nav ul ul {
+  list-style: none;
+}
+
+/* line 115, ../sass/main.scss */
+nav ul, nav li {
+  margin: 0;
+}
+
+/* line 116, ../sass/main.scss */
+dt {
+  font-weight: bold;
+}
+
+/* line 117, ../sass/main.scss */
+dd {
+  padding: 0 0 0.75em 1em;
+}
+
+/* Custom */
+/* line 120, ../sass/main.scss */
+.wrapper {
+  width: 1004px;
+  margin: 0 auto;
+  padding: 0 2.93rem;
+  min-height: 900px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+/* line 129, ../sass/main.scss */
+#content {
+  margin-bottom: 27px;
+  overflow: hidden;
+  padding-bottom: 20px;
+  background: #fff;
+  box-shadow: 0 0 30px 0px #dedede;
+  -moz-box-shadow: 0 0 30px 0px #dedede;
+  -webkit-box-shadow: 0 0 30px 0px #dedede;
+  margin-bottom: 27px;
+  overflow: hidden;
+}
+
+/* line 141, ../sass/main.scss */
+.floatRight {
+  float: right;
+}
+
+/* line 146, ../sass/main.scss */
+.wrapper form > h1 {
+  margin-left: 2.93rem;
+}
+/* line 150, ../sass/main.scss */
+.wrapper form > h2 {
+  margin: 1.155rem 2.93rem;
+  margin-top: 2.31rem;
+  font-size: 2em;
+}
+/* line 156, ../sass/main.scss */
+.wrapper form span {
+  display: inline-block;
+  margin: 1.155rem 2.93rem;
+  max-width: 39.52rem;
+  line-height: 1.5em;
+  font-size: 14px;
+}
+/* line 164, ../sass/main.scss */
+.wrapper form > div.tall {
+  max-height: initial;
+}
+/* line 167, ../sass/main.scss */
+.wrapper form > div.tall p input {
+  width: initial;
+  height: initial;
+}
+/* line 172, ../sass/main.scss */
+.wrapper form > div.tall p span {
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+  padding-left: 8px;
+  line-height: 1em;
+  font-size: 1.15em;
+}
+/* line 181, ../sass/main.scss */
+.wrapper form > div.tall textarea {
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 13rem;
+  margin-top: .35rem;
+}
+/* line 189, ../sass/main.scss */
+.wrapper form > div {
+  width: 22.44rem;
+  max-height: 4rem;
+  overflow: visible;
+  margin: 1.465rem 2.93rem;
+  display: inline-block;
+  vertical-align: top;
+}
+/* line 198, ../sass/main.scss */
+.wrapper form > div > h4 {
+  font-size: 1.6em;
+  line-height: 1em;
+  margin: 0;
+  font-weight: 400;
+}
+/* line 205, ../sass/main.scss */
+.wrapper form > div > input {
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 2.31rem;
+  font-size: 1.15em;
+  margin: 0;
+  margin-top: .35em;
+}
+/* line 214, ../sass/main.scss */
+.wrapper form > div > p {
+  padding-top: 11px;
+}
+/* line 219, ../sass/main.scss */
+.wrapper form div.submitButton {
+  display: block;
+  max-width: 102px;
+  clear: both;
+  border: 1px solid #888;
+  font-size: 1.25em;
+  line-height: 1em;
+  font-weight: 200;
+  color: #555;
+  padding: 10px 18px;
+  box-sizing: border-box;
+  width: initial;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+}

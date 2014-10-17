@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Scholarships</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="stylesheets/main.css" type="text/css" />
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation/foundation.js"></script>
+    <script src="js/foundation/foundation.offcanvas.js"></script>
+	<script src="js/vendor/jquery-2.1.1.js"></script>
+	<script src="js/vendor/jquery-ui-1.11.0.js"></script>
+	<script src="js/foundation/foundation.js"></script>
+	<script src="js/foundation/foundation.offcanvas.js"></script>
+	<script src="js/animateReplace.jquery.js"></script>
+    <script src="js/counter.js"></script>
+	<script src="js/fadein.js"></script>
+	<script src="js/ge-data.js"></script>
+	<script type="text/javascript" src="//is.byu.edu/site/resources/lead_submit.js"></script>
+
+    <script type="text/javascript"> 
+    /*var init = function() {
+		  var T2card = $('.T2card'),
+		  	flippers = $('.flip');
+		  console.log("inited");
+		  for(var i=0;i<flippers.length;i++) {
+			  console.log("flipper i "+i);
+			  console.log(flippers[i]);
+			  $(flippers[i]).bind( 'click', function() {			  
+			    T2card.toggleClass('flipped');
+			    console.log("Function ran, classname changed");
+			  });
+		  }
+    };
+    $(document).ready(function(){init();});
+    */
+    </script>
+    
+    <script type="text/javascript">
+		var debug = false;
+		attachForm("#contactForm",".clickhere", function( data, textStatus, jqXHR ){
+			if(debug){console.log("ajax connection done.")};
+			//	This is an example of a simple thing you could use to create a new element after your form. Placing a "placeholder" element provides you a natural way to move/place the response data where you want it. For flexibility of design, the way you've done it here is actually better. Therefore this is commented out.
+			//$('<div id="form-response">' + data.message + '</div>').insertAfter($("#contactForm"));
+			$("#form-submit").html('<img src="img/green-check-mark.png" class="form-success" />Thank you for your feedback! We appreciate your willingness to share your thoughts with us.').addClass("form-success");
+		}, false, debug);	//	The last two parameters are optional and here are set to their default values. They govern an optional setting if you supply null for the handler function and rely on the default setting there, and the debug setting which needs to be true to include debug information in the console.
+	</script>
+    
+	<script type="text/javascript">
+	(function($){	//	We've wrappered this javascript to keep it contained.
+		var debug = false;	//	development variable. optional and could be deleted here without consequence to execution.
+		$(document).foundation();	//	Initialize the foundation framework.
+			$(document).ready(function () {	//	Run the rest on document "ready" state change. (if document is somehow magically already in that state, this will fire immediately.)
+				//	Because this function is attached in multiple places, we define it as a variable so that it can exist once only in the code.
+			var closeMenuFunction = function() {
+				if($('.move-right').length > 0) {	//	This forces the function to operate as only a "close".
+							$('.off-canvas-wrap').foundation('offcanvas', 'toggle', 'move-right');
+							$('.maincontent').unbind("click.menumain");
+							if(debug) console.log("The menu should be closed/closing. The click handler has been removed from the .maincontent element.");
+				}
+			};
+					$('.left-small').bind("click.menu", function() {
+						if(debug) console.log("left-small clicked.");
+				//	Toggle the menu. This institutes the "current" state the user is requesting. (As in, it adds the class we're checking for later.)
+				$('.off-canvas-wrap').foundation('offcanvas', 'toggle', 'move-right');
+				//	Detect the existence of .move-right on the document. If it exists, then the menu is currently open.
+				if($('.move-right').length == 0) {
+					//	The menu has been closed!
+					if(debug) console.log("The menu has been closed!");
+							$('.maincontent').unbind("click.menumain");
+					} else {
+					//	The menu is open!
+					if(debug) console.log("The menu is open!");
+						$('.maincontent').bind("click.menumain", closeMenuFunction);
+				}
+					});
+			});
+	})(jQuery);
+	</script>
+</head>
+<body>
+	<div class="wrapper" id="content">
+		<form name="Scholarship Form" id="contactForm">
+			<h1>Scholarship Application</h1>
+			<span>Please complete this application if you would like BYU to consider your student for a reduced tuition rate on any online High School or Middle School course listed in the online catalog at <a href="http://is.byu.edu/site/courses/index.cfm#university=false|high-school=on|middle-school=on|continuing-education=false|ig=on|online=on|paper=on">elearn.byu.edu</a>.</span>
+			<h2>Counselor Information</h2>
+			<div>
+				<h4>Name:</h4>
+				<input class="contactAreaQuarter" type="text" placeholder="Kyle Jones" name="name" id="name" required >
+			</div>	 
+			<div>
+				<h4>Email:</h4>
+				<input class="contactAreaQuarter" type="email" placeholder="kyle.jones@example.com" name="email" id="email" required >
+			</div>
+			<div>
+				<h4>School Name:</h4>
+				<input type="text" placeholder="Example High School" name="school" id="school" required >
+			</div>
+			<div>
+				<h4>Phone:</h4>
+				<input type="tel" placeholder="(222)-222-2222" name="phone" id="phone" required >
+			</div>
+			<h2>Student Information</h2>
+			<div>
+				<h4>BYU NetID:</h4>
+				<input type="text" placeholder="Student123" name="identity" id="netID" required >
+			</div>
+			<div>
+				<p>Prior to sending this form, please ensure your student has a current BYU NetID. This is done by going to the <a href="http://is.byu.edu/site/">elearn.byu.edu</a> and clicking on the Login button.</p>
+			</div>	 
+			<div>
+				<h4>Course:</h4>
+				<input type="text" placeholder="ACC-200 Principles of Accounting" name="course" id="course" required >
+			</div>
+			<div>
+				<p>Be sure you select the correct course number and corresponding course name.</p>
+			</div>
+			<div>
+				<h4>GPA:</h4>
+				<input type="number" placeholder="3.5" name="GPA" id="GPA" required >
+			</div>
+			<div class="tall floatRight">
+				<h4>Recommendation:</h4>
+				<textarea name="message" id="message" placeholder="Placeholder text goes here :)"></textarea>
+			</div>
+			<div class="tall">
+				<h4>Student Needs:</h4>
+				<p><input type="radio" value="Free" name="Needs" id="Needs"><span>Free</span></p>
+				<p><input type="radio" value="Reduced" name="Needs" id="Needs"><span>Reduced</span></p>
+				<p><input type="radio" value="No Assistance" name="Needs" id="Needs"><span>No Assistance</span></p>		
+			</div>
+			
+			<div class="submitButton clickhere">SUBMIT</div>
+			<div id="form-submit"><!-- This is where the response from the form submission code will be placed after they submit. --></div>
+			<input type="hidden" id="form-id" name="form" value="GE Feedback">
+			<input type="hidden" id="send_email_to_marketing-id" name="send-email-to-marketing" value="true">
+		</form>
+	</div>
+</body>
+</html>
