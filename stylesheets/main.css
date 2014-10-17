@@ -534,3 +534,9 @@ dd {
   margin-right: auto;
   cursor: pointer;
 }
+/* line 235, ../sass/main.scss */
+.wrapper form div.submitButton:hover {
+  border: 1px solid #aaa;
+  color: #7b7b7b;
+  background-color: rgba(220, 220, 220, 0.05);
+}

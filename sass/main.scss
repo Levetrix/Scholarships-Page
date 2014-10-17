@@ -231,6 +231,12 @@ dd { padding: 0 0 .75em 1em }
 		margin-left:auto;
 		margin-right:auto;
 		cursor:pointer;
+		
+		&:hover {
+			border:1px solid #aaa;
+			color:#7b7b7b;
+			background-color:rgba(220,220,220,.05);
+		}
 	}
 }
 
