@@ -9,24 +9,6 @@
 	<script src="js/vendor/jquery-ui-1.11.0.js"></script>
 	<script type="text/javascript" src="//is.byu.edu/site/resources/lead_submit.js"></script>
 
-    <script type="text/javascript"> 
-    /*var init = function() {
-		  var T2card = $('.T2card'),
-		  	flippers = $('.flip');
-		  console.log("inited");
-		  for(var i=0;i<flippers.length;i++) {
-			  console.log("flipper i "+i);
-			  console.log(flippers[i]);
-			  $(flippers[i]).bind( 'click', function() {			  
-			    T2card.toggleClass('flipped');
-			    console.log("Function ran, classname changed");
-			  });
-		  }
-    };
-    $(document).ready(function(){init();});
-    */
-    </script>
-    
     <script type="text/javascript">
 		var debug = false;
 		attachForm("#contactForm",".clickhere", function( data, textStatus, jqXHR ){
@@ -36,6 +18,7 @@
 			$("#form-submit").html('<img src="img/green-check-mark.png" class="form-success" />Thank you for your feedback! We appreciate your willingness to share your thoughts with us.').addClass("form-success");
 		}, false, debug);	//	The last two parameters are optional and here are set to their default values. They govern an optional setting if you supply null for the handler function and rely on the default setting there, and the debug setting which needs to be true to include debug information in the console.
 	</script>
+	
 </head>
 <body>
 	<div class="wrapper" id="content">
