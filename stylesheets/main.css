@@ -485,7 +485,7 @@ dd {
 .wrapper form > div.tall textarea {
   width: 100%;
   box-sizing: border-box;
-  min-height: 13rem;
+  min-height: 14rem;
   margin-top: .35rem;
 }
 /* line 189, ../sass/main.scss */
