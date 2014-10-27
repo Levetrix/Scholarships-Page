@@ -505,19 +505,20 @@ dd {
   font-weight: 400;
 }
 /* line 209, ../sass/main.scss */
-.wrapper form > div > input {
+.wrapper form > div > input, .wrapper form > div select {
   width: 100%;
+  border: 1px solid #aaa;
   box-sizing: border-box;
   min-height: 2.31rem;
   font-size: 1.15em;
   margin: 0;
   margin-top: .35em;
 }
-/* line 218, ../sass/main.scss */
+/* line 219, ../sass/main.scss */
 .wrapper form > div > p {
   padding-top: 11px;
 }
-/* line 223, ../sass/main.scss */
+/* line 224, ../sass/main.scss */
 .wrapper form div.submitButton {
   display: block;
   max-width: 102px;
@@ -534,7 +535,7 @@ dd {
   margin-right: auto;
   cursor: pointer;
 }
-/* line 239, ../sass/main.scss */
+/* line 240, ../sass/main.scss */
 .wrapper form div.submitButton:hover {
   border: 1px solid #aaa;
   color: #7b7b7b;

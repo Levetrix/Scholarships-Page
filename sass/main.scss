@@ -206,8 +206,9 @@ dd { padding: 0 0 .75em 1em }
 			font-weight:400;
 		}
 		
-		& > input {
+		& > input,select {
 			width:100%;
+			border: 1px solid #aaa;
 			box-sizing:border-box;
 			min-height:$small-gutter;
 			font-size:1.15em;
