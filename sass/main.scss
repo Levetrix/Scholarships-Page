@@ -162,7 +162,7 @@ dd { padding: 0 0 .75em 1em }
 	}
 	
 	& > div.tall {
-		max-height:initial;	
+		max-height:100rem;	
 		
 		& p input {
 			width:initial;
@@ -176,6 +176,7 @@ dd { padding: 0 0 .75em 1em }
 			padding-left:8px;
 			line-height:1em;
 			font-size:1.15em;
+			position:absolute;
 		}		
 		
 		& textarea {
@@ -195,10 +196,20 @@ dd { padding: 0 0 .75em 1em }
 		display:inline-block;
 		vertical-align:top;
 		
-		//&.GPA > input {
-		//	width:45%;
-		//}
-		
+		&.GPA {
+			
+			& > span {
+				margin-left:0;
+				margin-right:#{$med-gutter/8};
+			}
+			
+			& > input {
+				display:inline-block;
+				width:65px;
+				min-height: #{$small-gutter};
+								
+			}
+		}
 		& > h4 {
 			font-size:1.6em;
 			line-height:1em;
@@ -214,10 +225,12 @@ dd { padding: 0 0 .75em 1em }
 			font-size:1.15em;
 			margin:0;
 			margin-top:.35em;
+			padding-left:10px;
 		}
 		
 		& > p {
 			padding-top:11px;
+			position:relative;
 		}
 	}	
 	
