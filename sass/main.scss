@@ -117,7 +117,7 @@ dt { font-weight: bold }
 dd { padding: 0 0 .75em 1em }
 
 /* Custom */
-.wrapper {
+#content.wrapper {
 	width: 1004px;
 	margin: 0 auto;
 	padding: 0 #{$med-gutter/2};
