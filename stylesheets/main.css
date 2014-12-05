@@ -418,7 +418,7 @@ dd {
 
 /* Custom */
 /* line 120, ../sass/main.scss */
-.wrapper {
+#content.wrapper {
   width: 1004px;
   margin: 0 auto;
   padding: 0 2.93rem;
