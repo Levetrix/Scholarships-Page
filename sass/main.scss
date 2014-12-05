@@ -164,6 +164,12 @@ dd { padding: 0 0 .75em 1em }
 	& > div.tall {
 		max-height:100rem;	
 		
+		& h4 > span {
+			font-size:.85rem;
+			margin:0;
+			margin-left:8px;
+		}
+		
 		& p input {
 			width:initial;
 			height:initial;
@@ -176,13 +182,13 @@ dd { padding: 0 0 .75em 1em }
 			padding-left:8px;
 			line-height:1em;
 			font-size:1.15em;
-			position:absolute;
+			margin-right:34px;
 		}		
 		
 		& textarea {
 			width:100%;
 			box-sizing:border-box;
-			min-height:14rem;
+			min-height:11.25rem;
 			margin-top:.35rem;
 		}
 	}

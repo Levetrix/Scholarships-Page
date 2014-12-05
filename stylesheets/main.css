@@ -468,11 +468,17 @@ dd {
   max-height: 100rem;
 }
 /* line 167, ../sass/main.scss */
+.wrapper form > div.tall h4 > span {
+  font-size: .85rem;
+  margin: 0;
+  margin-left: 8px;
+}
+/* line 173, ../sass/main.scss */
 .wrapper form > div.tall p input {
   width: initial;
   height: initial;
 }
-/* line 172, ../sass/main.scss */
+/* line 178, ../sass/main.scss */
 .wrapper form > div.tall p span {
   margin: 0;
   padding: 0;
@@ -480,16 +486,16 @@ dd {
   padding-left: 8px;
   line-height: 1em;
   font-size: 1.15em;
-  position: absolute;
+  margin-right: 34px;
 }
-/* line 182, ../sass/main.scss */
+/* line 188, ../sass/main.scss */
 .wrapper form > div.tall textarea {
   width: 100%;
   box-sizing: border-box;
-  min-height: 14rem;
+  min-height: 11.25rem;
   margin-top: .35rem;
 }
-/* line 190, ../sass/main.scss */
+/* line 196, ../sass/main.scss */
 .wrapper form > div {
   width: 22.44rem;
   max-height: 4rem;
@@ -498,25 +504,25 @@ dd {
   display: inline-block;
   vertical-align: top;
 }
-/* line 201, ../sass/main.scss */
+/* line 207, ../sass/main.scss */
 .wrapper form > div.GPA > span {
   margin-left: 0;
   margin-right: 0.7325rem;
 }
-/* line 206, ../sass/main.scss */
+/* line 212, ../sass/main.scss */
 .wrapper form > div.GPA > input {
   display: inline-block;
   width: 65px;
   min-height: 2.31rem;
 }
-/* line 213, ../sass/main.scss */
+/* line 219, ../sass/main.scss */
 .wrapper form > div > h4 {
   font-size: 1.6em;
   line-height: 1em;
   margin: 0;
   font-weight: 400;
 }
-/* line 220, ../sass/main.scss */
+/* line 226, ../sass/main.scss */
 .wrapper form > div > input, .wrapper form > div select {
   width: 100%;
   border: 1px solid #aaa;
@@ -527,12 +533,12 @@ dd {
   margin-top: .35em;
   padding-left: 10px;
 }
-/* line 231, ../sass/main.scss */
+/* line 237, ../sass/main.scss */
 .wrapper form > div > p {
   padding-top: 11px;
   position: relative;
 }
-/* line 237, ../sass/main.scss */
+/* line 243, ../sass/main.scss */
 .wrapper form div.submitButton {
   display: block;
   max-width: 102px;
@@ -549,7 +555,7 @@ dd {
   margin-right: auto;
   cursor: pointer;
 }
-/* line 253, ../sass/main.scss */
+/* line 259, ../sass/main.scss */
 .wrapper form div.submitButton:hover {
   border: 1px solid #aaa;
   color: #7b7b7b;

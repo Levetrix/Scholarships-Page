@@ -50,7 +50,7 @@
 				<input type="text" placeholder="Student123" name="identity" id="netID" required >
 			</div>
 			<div>
-				<p>Prior to sending this form, please ensure your student has a current BYU NetID. This is done by going to the <a target="_blank" href="http://is.byu.edu/site/">elearn.byu.edu</a> and clicking on the "Login" button.</p>
+				<p>Prior to sending this form, please ensure your student has a current BYU NetID. This is done by going to the <a target="_blank" href="http://is.byu.edu/site/">byu.is</a> and clicking on the "Login" button.</p>
 			</div>	 
 			<div>
 				<h4>Course:</h4>
@@ -60,18 +60,30 @@
 				<p>Be sure to select the correct course category and corresponding course number.</p>
 			</div>
 			<div class="GPA">
-				<h4>Academic Merit:</h4>
-				<span>GPA:</span><input type="number" placeholder="3.33" name="GPA" id="GPA" required >
+				<h4>Approximate GPA:</h4>
+				 <span>GPA:</span><input type="number" placeholder="3.33" name="GPA" id="GPA" required >
+				<!--<input type="radio" value="4.00" name="gpa" id="gpa"><span>4.00</span>
+				<input type="radio" value="3.85" name="gpa" id="gpa"><span>3.85</span>
+				<input type="radio" value="3.75" name="gpa" id="gpa"><span>3.75</span>
+				<input type="radio" value="3.5" name="gpa" id="gpa"><span>3.5</span>
+				<input type="radio" value="3.35" name="gpa" id="gpa"><span>3.35</span>
+				<input type="radio" value="3.25" name="gpa" id="gpa"><span>3.25</span>
+				<input type="radio" value="3.00" name="gpa" id="gpa"><span>3.00</span>
+				<input type="radio" value="2.85" name="gpa" id="gpa"><span>2.85</span>
+				<input type="radio" value="2.75" name="gpa" id="gpa"><span>2.75</span>
+				<input type="radio" value="2.5" name="gpa" id="gpa"><span>2.5</span> -->
 			</div>
 			<div class="tall floatRight">
 				<h4>Recommendation:</h4>
 				<textarea name="message" id="message" placeholder="Please explain why your student should qualify for either academic or financial scholarship."></textarea>
 			</div>
 			<div class="tall">
-				<h4>Financial Needs:</h4>
-				<p><input type="radio" value="Free" name="Needs" id="Needs"><span>Student Qualifies for Free Lunch</span></p>
-				<p><input type="radio" value="Reduced" name="Needs" id="Needs"><span>Student Qualifies for Reduced Lunch</span></p>
-				<p><input type="radio" value="No Assistance" name="Needs" id="Needs"><span>Student did not apply for Free/Reduced Lunch</span></p>		
+				<h4>Financial Needs:<span>(1 = none, 5 = high need)</span></h4>
+				<p><input type="radio" value="1" name="Needs" id="Needs"><span>1</span>
+				<input type="radio" value="2" name="Needs" id="Needs"><span>2</span>
+				<input type="radio" value="3" name="Needs" id="Needs"><span>3</span>
+				<input type="radio" value="4" name="Needs" id="Needs"><span>4</span>
+				<input type="radio" value="5" name="Needs" id="Needs"><span>5</span></p>		
 			</div>
 			
 			<div class="submitButton clickhere">SUBMIT</div>

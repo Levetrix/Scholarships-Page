@@ -20,7 +20,7 @@ $(document).ready(function() {
 				for(var category in catalogData) {
 					if(debug) console.log("Course category: " + catalogData[category]);
 					for(var j=0; j < catalogData[category].length ; j++){
-						var courseTitle = catalogData[category][j]['course-title'];
+						var courseTitle = catalogData[category][j]['highschool-title'];
 						if(Object.keys(catalogCourses).indexOf(courseTitle) == -1) {
 							catalogCourses[courseTitle] = catalogData[category][j];
 							if(debug) console.log("Adding course: ");
