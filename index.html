@@ -40,7 +40,7 @@
 					Name: Kyle Jones <br />
 					Email: yourEmail@email.com<br />
 					Phone: (222)222-2222<br />
-					<a href="">This information is incorrect</a>
+					Click here if <a href="">this information is incorrect</a>
 					
 					</span>
 				</section>
@@ -55,7 +55,7 @@
 			</div>	 
 			<div>
 				<h4>Course:</h4>
-				<input type="text" placeholder="ACC-200 Principles of Accounting" name="course" id="course" required >
+				<input type="text" placeholder="ACC-041: Accounting" name="course" id="course" required >
 				<!-- <script>$("#course").on("mouseover",function(){console.log($("#ui-id-1").html())});</script> -->
 			</div>
 			<div>
@@ -63,7 +63,7 @@
 			</div>
 			<div class="GPA">
 				<h4>Approximate GPA:</h4>
-				 <span>GPA:</span><input type="number" placeholder="3.33" name="GPA" id="GPA" required >
+				 <span>GPA:</span><input type="number" placeholder="3.0" name="GPA" id="GPA" min="1" max="5" step=".1" required >
 				<!--<input type="radio" value="4.00" name="gpa" id="gpa"><span>4.00</span>
 				<input type="radio" value="3.85" name="gpa" id="gpa"><span>3.85</span>
 				<input type="radio" value="3.75" name="gpa" id="gpa"><span>3.75</span>
@@ -86,8 +86,16 @@
 				<input type="radio" value="3" name="Needs" id="Needs"><span>3</span>
 				<input type="radio" value="4" name="Needs" id="Needs"><span>4</span>
 				<input type="radio" value="5" name="Needs" id="Needs"><span>5</span></p>
-				<span>1 = none, 5 = high need</span>		
+				<span>1 = little financial need, 5 = high need</span>		
 			</div>
+			<div class="attachment tall">
+                <h4>Other Information:</h4>
+            	<p>If you have any additional information for us to consider with this scholarship application please send it to:
+            	<a href="">email@byu.edu</a></p>
+            	<p>Put the following in your subject line: "Regarding Scholarship Application #AAF447E
+            	Don't forget to include any documents or other files you want us to look at!</p>
+            </div>
+			
 			
 			<div class="submitButton clickhere">SUBMIT</div>
 			<div id="form-submit"><!-- This is where the response from the form submission code will be placed after they submit. --></div>

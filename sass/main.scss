@@ -148,14 +148,18 @@ dd { padding: 0 0 .75em 1em }
 	}
 	
 	& > h2 {
-		margin:#{$small-gutter/2} #{$med-gutter/2};
+		margin:#{$small-gutter/4} #{$med-gutter/2};
 		margin-top:$small-gutter;
 		font-size:2em;	
+		
+		&:first-of-type {
+			margin-top:0;
+		}
 	}
 	
 	& span {
 		display:inline-block;
-		margin:#{$small-gutter/2} #{$med-gutter/2};
+		margin:#{$small-gutter/4} #{$med-gutter/2};
 		max-width:#{$half*1.5 + $med-gutter};
 		line-height:1.5em;
 		font-size:14px;
@@ -175,6 +179,11 @@ dd { padding: 0 0 .75em 1em }
 	
 	& > div.tall {
 		max-height:100rem;	
+		
+		&.attachment {
+			width:#{$half * 1.5 + $med-gutter};
+			margin-top:0;
+		}
 		
 		& h4 > span {
 			font-size:.85rem;
@@ -200,7 +209,7 @@ dd { padding: 0 0 .75em 1em }
 		& textarea {
 			width:100%;
 			box-sizing:border-box;
-			min-height:11.25rem;
+			min-height:10.25rem;
 			margin-top:.35rem;
 		}
 		
@@ -216,7 +225,7 @@ dd { padding: 0 0 .75em 1em }
 		width:$half;
 		max-height:4rem;
 		overflow:visible;
-		margin:#{$med-gutter/4} #{$med-gutter/2};
+		margin:#{$med-gutter/6} #{$med-gutter/2};
 		display:inline-block;
 		vertical-align:top;
 		
