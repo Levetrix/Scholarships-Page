@@ -463,22 +463,34 @@ dd {
   line-height: 1.5em;
   font-size: 14px;
 }
-/* line 164, ../sass/main.scss */
+/* line 163, ../sass/main.scss */
+.wrapper form span#contact {
+  margin-left: 0;
+  margin-top: 0.1155rem;
+  font-size: .95rem;
+  color: #666;
+}
+/* line 169, ../sass/main.scss */
+.wrapper form span#contact a {
+  display: block;
+  margin-top: .5rem;
+}
+/* line 176, ../sass/main.scss */
 .wrapper form > div.tall {
   max-height: 100rem;
 }
-/* line 167, ../sass/main.scss */
+/* line 179, ../sass/main.scss */
 .wrapper form > div.tall h4 > span {
   font-size: .85rem;
   margin: 0;
   margin-left: 8px;
 }
-/* line 173, ../sass/main.scss */
+/* line 185, ../sass/main.scss */
 .wrapper form > div.tall p input {
   width: initial;
   height: initial;
 }
-/* line 178, ../sass/main.scss */
+/* line 190, ../sass/main.scss */
 .wrapper form > div.tall p span {
   margin: 0;
   padding: 0;
@@ -488,14 +500,19 @@ dd {
   font-size: 1.15em;
   margin-right: 34px;
 }
-/* line 188, ../sass/main.scss */
+/* line 200, ../sass/main.scss */
 .wrapper form > div.tall textarea {
   width: 100%;
   box-sizing: border-box;
   min-height: 11.25rem;
   margin-top: .35rem;
 }
-/* line 196, ../sass/main.scss */
+/* line 207, ../sass/main.scss */
+.wrapper form > div.tall span {
+  margin-left: 0;
+  margin-top: 0.5775rem;
+}
+/* line 214, ../sass/main.scss */
 .wrapper form > div {
   width: 22.44rem;
   max-height: 4rem;
@@ -504,25 +521,25 @@ dd {
   display: inline-block;
   vertical-align: top;
 }
-/* line 207, ../sass/main.scss */
+/* line 225, ../sass/main.scss */
 .wrapper form > div.GPA > span {
   margin-left: 0;
   margin-right: 0.7325rem;
 }
-/* line 212, ../sass/main.scss */
+/* line 230, ../sass/main.scss */
 .wrapper form > div.GPA > input {
   display: inline-block;
   width: 65px;
   min-height: 2.31rem;
 }
-/* line 219, ../sass/main.scss */
+/* line 237, ../sass/main.scss */
 .wrapper form > div > h4 {
   font-size: 1.6em;
   line-height: 1em;
   margin: 0;
   font-weight: 400;
 }
-/* line 226, ../sass/main.scss */
+/* line 244, ../sass/main.scss */
 .wrapper form > div > input, .wrapper form > div select {
   width: 100%;
   border: 1px solid #aaa;
@@ -533,12 +550,12 @@ dd {
   margin-top: .35em;
   padding-left: 10px;
 }
-/* line 237, ../sass/main.scss */
+/* line 255, ../sass/main.scss */
 .wrapper form > div > p {
   padding-top: 11px;
   position: relative;
 }
-/* line 243, ../sass/main.scss */
+/* line 261, ../sass/main.scss */
 .wrapper form div.submitButton {
   display: block;
   max-width: 102px;
@@ -555,9 +572,48 @@ dd {
   margin-right: auto;
   cursor: pointer;
 }
-/* line 259, ../sass/main.scss */
+/* line 277, ../sass/main.scss */
 .wrapper form div.submitButton:hover {
   border: 1px solid #aaa;
   color: #7b7b7b;
   background-color: rgba(220, 220, 220, 0.05);
+}
+
+/* line 285, ../sass/main.scss */
+li.ui-menu-item {
+  border: 0px blue solid;
+  font-size: .95rem;
+  padding: .35rem;
+  list-style-type: none;
+}
+/* line 291, ../sass/main.scss */
+li.ui-menu-item:hover {
+  border: 0px solid green;
+  background: white;
+  color: #555;
+  cursor: pointer;
+}
+
+/* line 299, ../sass/main.scss */
+.ui-autocomplete {
+  max-height: 150px;
+  width: 25.37rem;
+  overflow: hidden;
+}
+
+/* line 315, ../sass/main.scss */
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus, .ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight, .ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active {
+  border: 0px solid green;
+  background: white;
+  color: #555;
+  cursor: pointer;
 }

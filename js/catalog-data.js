@@ -11,7 +11,6 @@ $(document).ready(function() {
 		catalogCourses = {};
 		var acceptableSchoolTypes = ["HIGH SCHOOL","MIDDLE SCHOOL"];
 		
-		$("#course").replaceWith($('<select name="course"></select>').attr("id","course").addClass("be-there"));
 		
 		for(schoolType in allCatalogData) {
 			if(debug) console.log("searching for school type("+schoolType+"): " + acceptableSchoolTypes.indexOf(schoolType.toUpperCase()));
@@ -36,9 +35,14 @@ $(document).ready(function() {
 		var catalogCourseList = Object.keys(catalogCourses);
 		catalogCourseList.sort();
 		if(debug) console.log(catalogCourseList);
-		for(var i=0;i<catalogCourseList.length;i++) {
-			$("#course").append($('<option>'+catalogCourseList[i]+'</option>'));
-		}
+		//$("#course").replaceWith($('<select name="course"></select>').attr("id","course").addClass("be-there"));
+		//for(var i=0;i<catalogCourseList.length;i++) {
+		//	$("#course").append($('<option>'+catalogCourseList[i]+'</option>'));
+		//}
+		
+		$("#course").autocomplete({
+			source: catalogCourseList
+		});
 	});
 });
 

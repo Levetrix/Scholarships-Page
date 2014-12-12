@@ -159,6 +159,18 @@ dd { padding: 0 0 .75em 1em }
 		max-width:#{$half*1.5 + $med-gutter};
 		line-height:1.5em;
 		font-size:14px;
+		
+		&#contact {
+			margin-left:0;
+			margin-top:#{$small-gutter * .05};
+			font-size:.95rem;
+			color:#666;
+			
+			& a {
+				display:block;
+				margin-top:.5rem;
+			}
+		}
 	}
 	
 	& > div.tall {
@@ -190,6 +202,12 @@ dd { padding: 0 0 .75em 1em }
 			box-sizing:border-box;
 			min-height:11.25rem;
 			margin-top:.35rem;
+		}
+		
+		& span {
+			margin-left:0;
+			margin-top:#{$small-gutter * .25};
+			
 		}
 	}
 	
@@ -264,9 +282,42 @@ dd { padding: 0 0 .75em 1em }
 	}
 }
 
+li.ui-menu-item{
+	border: 0px blue solid;
+	font-size:.95rem;
+	padding:.35rem;
+	list-style-type:none;
+	
+	&:hover {
+		border:0px solid green;
+		background:white;
+		color:#555;
+		cursor:pointer;
+	}
+}
+
+.ui-autocomplete {
+	max-height:150px;
+	width: #{$half + $med-gutter/2};
+	overflow:hidden;
+}
 
 
-
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus, .ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight, .ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active {
+	border:0px solid green;
+	background:white;
+	color:#555;
+	cursor:pointer;
+}
 
 
 
