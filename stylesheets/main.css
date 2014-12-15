@@ -1,11 +1,11 @@
-@charset "IBM437";
+@charset "UTF-8";
 @CHARSET "ISO-8859-1";
 /* BYU Template Stylesheet
 * Last Updated: 22 Sep 2011
 * Written by: BYU Web Community
 * web.byu.edu 
 */
-/*! normalize.css 2011-08-12T17:28 UTC · http://github.com/necolas/normalize.css */
+/*! normalize.css 2011-08-12T17:28 UTC â•– http://github.com/necolas/normalize.css */
 /* line 31, ../sass/main.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
   display: block;
@@ -284,7 +284,7 @@ h6 {
 
 /* line 89, ../sass/main.scss */
 h2, h3, h4, h5, h6 {
-  color: #444444;
+  color: #444;
 }
 
 /* line 90, ../sass/main.scss */
@@ -309,7 +309,7 @@ body strong {
 
 /* line 94, ../sass/main.scss */
 body, select, input, textarea {
-  color: #444444;
+  color: #444;
 }
 
 /* line 95, ../sass/main.scss */
@@ -476,7 +476,7 @@ dd {
 }
 /* line 173, ../sass/main.scss */
 .wrapper form span#contact a {
-  display: block;
+  /*display:block; Luke changed 2014-12-12*/
   margin-top: .5rem;
 }
 /* line 180, ../sass/main.scss */
@@ -610,7 +610,7 @@ li.ui-menu-item:hover {
   overflow: hidden;
 }
 
-/* line 324, ../sass/main.scss */
+/* line 315, ../sass/main.scss */
 .ui-state-hover,
 .ui-widget-content .ui-state-hover,
 .ui-widget-header .ui-state-hover,
