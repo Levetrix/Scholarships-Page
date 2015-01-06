@@ -1,46 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="ISO-8859-1">
-    <title>Scholarships</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="js/vendor/jquery-2.1.1.js"></script>
-	<script src="js/vendor/jquery-ui-1.11.0.js"></script>
-	 <link rel="stylesheet" href="js/jquery-ui/jquery-ui.theme.css" type="text/css" />
-	<script type="text/javascript" src="//is.byu.edu/site/resources/lead_submit.js"></script>
+	<!-- <meta charset="UTF-8" /> -->
+	<title>Scholarships</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<script src="js/vendor/jquery-2.1.1.js"> </script>
+		<script src="js/vendor/jquery-ui-1.11.0.js"> </script>
+	<link rel="stylesheet" href="js/jquery-ui/jquery-ui.theme.css" type="text/css" />
 	<link rel="stylesheet" href="stylesheets/main.css" type="text/css" />
 	
-    <script type="text/javascript">
-		var debug = false;
-		attachForm("#contactForm",".clickhere", function( data, textStatus, jqXHR ){
-			if(debug){console.log("ajax connection done.")};
-			//	This is an example of a simple thing you could use to create a new element after your form. Placing a "placeholder" element provides you a natural way to move/place the response data where you want it. For flexibility of design, the way you've done it here is actually better. Therefore this is commented out.
-			//$('<div id="form-response">' + data.message + '</div>').insertAfter($("#contactForm"));
-			$("#form-submit").html('<img src="img/green-check-mark.png" class="form-success" />Thank you for your feedback! We appreciate your willingness to share your thoughts with us.').addClass("form-success");
-		}, false, debug);	//	The last two parameters are optional and here are set to their default values. They govern an optional setting if you supply null for the handler function and rely on the default setting there, and the debug setting which needs to be true to include debug information in the console.
-	</script>
 	
 </head>
 <body>
 	<div class="wrapper" id="content">
-		<form name="Scholarship Form" id="contactForm">
+		<form method="post" name="ScholarshipForm" id="contactForm" action="scholarship-apply.cfm">
 			<h1>Scholarship Application</h1>
-			<span>Complete this application to have your student considered for a BYU&nbsp;Independent&nbsp;Study scholarship.
+			<span>Complete this application to have your student considered for a BYU&#160;Independent&#160;Study scholarship.
 				Students can qualify for free or reduced tuition in any <a target="_blank" href="http://is.byu.edu/site/courses/index.cfm#university=false|high-school=on|middle-school=on|continuing-education=false|ig=on|online=on|paper=on">Middle School or High School course</a>.
 			</span>
 			<span>Prior to sending this form, please ensure your student has a current BYU NetID. This is done by going to the <a target="_blank" href="http://is.byu.edu/site/">byu.is</a> and clicking on the "Login" button.</span>
 			<h2>Counselor Information</h2>
 			<div>
 				<h4>School and State:</h4>
-				<input type="text" placeholder="Example High School, California" name="school" id="school" required >
+				<input type="text" placeholder="Example High School, California" name="school" id="school" required="required" />
 			</div>
 			<div>
 				<h4>Contact Information:</h4>
 				<section>
 					<span id="contact">
-					Name: Kyle Jones <br />
-					Email: yourEmail@email.com<br />
-					Phone: (222)222-2222<br />
+					Name: %%FULL_NAME%% <br />
+					Email: %%EMAIL_ADDRESS%%<br />
+					Phone: %%PHONE_NUMBER%%<br />
 					Click here if <a href="">this information is incorrect</a>
 					
 					</span>
@@ -49,55 +39,61 @@
 			<h2>Student Information</h2>
 			<div>
 				<h4>BYU NetID:</h4>
-				<input type="text" placeholder="Student123" name="identity" id="netID" required >
+				<input type="text" placeholder="Student123" name="identity" id="netID" required="required" />
 			</div> 
 			<div>
 				<h4>Course:</h4>
-				<input type="text" placeholder="ACC-041: Accounting" name="course" id="course" required >
+				<input type="text" placeholder="ACCOUNTING: ACC-041" name="course" id="course" required="required" />
 				<!-- <script>$("#course").on("mouseover",function(){console.log($("#ui-id-1").html())});</script> -->
+				<input type="hidden" name="course_shorttitle" id="hidden-course" value="unknown" />
 			</div>
 			<div class="GPA">
 				<h4>Approximate GPA:</h4>
-				 <span>GPA:</span><input type="number" placeholder="3.0" name="GPA" id="GPA" min="1" max="5" step=".1" required >
-				<!--<input type="radio" value="4.00" name="gpa" id="gpa"><span>4.00</span>
-				<input type="radio" value="3.85" name="gpa" id="gpa"><span>3.85</span>
-				<input type="radio" value="3.75" name="gpa" id="gpa"><span>3.75</span>
-				<input type="radio" value="3.5" name="gpa" id="gpa"><span>3.5</span>
-				<input type="radio" value="3.35" name="gpa" id="gpa"><span>3.35</span>
-				<input type="radio" value="3.25" name="gpa" id="gpa"><span>3.25</span>
-				<input type="radio" value="3.00" name="gpa" id="gpa"><span>3.00</span>
-				<input type="radio" value="2.85" name="gpa" id="gpa"><span>2.85</span>
-				<input type="radio" value="2.75" name="gpa" id="gpa"><span>2.75</span>
-				<input type="radio" value="2.5" name="gpa" id="gpa"><span>2.5</span> -->
+				 <span>GPA:</span><input type="number" placeholder="3.0" name="GPA" id="GPA" min="1" max="5" step=".1" required="required" />
+				<!--<input type="radio" value="4.00" name="gpa" id="gpa"/><span>4.00</span>
+				<input type="radio" value="3.85" name="gpa" id="gpa"/><span>3.85</span>
+				<input type="radio" value="3.75" name="gpa" id="gpa"/><span>3.75</span>
+				<input type="radio" value="3.5" name="gpa" id="gpa"/><span>3.5</span>
+				<input type="radio" value="3.35" name="gpa" id="gpa"/><span>3.35</span>
+				<input type="radio" value="3.25" name="gpa" id="gpa"/><span>3.25</span>
+				<input type="radio" value="3.00" name="gpa" id="gpa"/><span>3.00</span>
+				<input type="radio" value="2.85" name="gpa" id="gpa"/><span>2.85</span>
+				<input type="radio" value="2.75" name="gpa" id="gpa"/><span>2.75</span>
+				<input type="radio" value="2.5" name="gpa" id="gpa"/><span>2.5</span> -->
 			</div>
 			<div class="tall floatRight">
 				<h4>Recommendation:</h4>
-				<textarea name="message" id="message" placeholder="Please explain why your student should qualify for either academic or financial scholarship."></textarea>
+				<textarea name="message" id="message" placeholder="Please explain why your student should qualify for either academic or financial scholarship." > </textarea>
 			</div>
 			<div class="tall">
 				<h4>Financial Needs:</h4>
-				<p><input type="radio" value="1" name="Needs" id="Needs"><span>1</span>
-				<input type="radio" value="2" name="Needs" id="Needs"><span>2</span>
-				<input type="radio" value="3" name="Needs" id="Needs"><span>3</span>
-				<input type="radio" value="4" name="Needs" id="Needs"><span>4</span>
-				<input type="radio" value="5" name="Needs" id="Needs"><span>5</span></p>
+				<p><input type="radio" value="1" name="Needs" id="Needs" /><span>1</span>
+				<input type="radio" value="2" name="Needs" id="Needs" /><span>2</span>
+				<input type="radio" value="3" name="Needs" id="Needs" /><span>3</span>
+				<input type="radio" value="4" name="Needs" id="Needs"/><span>4</span>
+				<input type="radio" value="5" name="Needs" id="Needs"/><span>5</span></p>
 				<span>1 = little financial need, 5 = high need</span>		
 			</div>
 			<div class="attachment tall">
-                <h4>Other Information:</h4>
-            	<p>If you have any additional information for us to consider with this scholarship application please send it to:
-            	<a href="">email@byu.edu</a>.
-            	Put the following in your subject line: "Regarding Scholarship Application #AAF447E."
-            	Don't forget to include any documents or other files you want us to look at!</p>
-            </div>
+				<h4>Other Information:</h4>
+				<p>If you have any additional information for us to consider with this scholarship application please send it to:
+				<a href="">byuis@byu.edu</a>.
+				Put the following in your subject line: "Regarding Scholarship Application #%%EMAIL_TOKEN%%."
+				Don't forget to include any documents or other files you want us to look at!</p>
+			</div>
 			
 			
 			<div class="submitButton clickhere">SUBMIT</div>
 			<div id="form-submit"><!-- This is where the response from the form submission code will be placed after they submit. --></div>
-			<input type="hidden" id="form-id" name="form" value="Scholarship Form">
-			<input type="hidden" id="send_email_to_marketing-id" name="send-email-to-marketing" value="true">
+			<input type="hidden" id="form-id" name="form" value="Scholarship Form"/>
+			<input type="hidden" id="send_email_to_marketing-id" name="send-email-to-marketing" value="true"/>
+			<script src="js/catalog-data.js"> </script>
+			<script language="javascript">
+				$(".submitButton").on("click",function() {
+					$("#contactForm").submit();
+				});
+			</script>
 		</form>
 	</div>
-	<script src="js/catalog-data.js"></script>
 </body>
 </html>

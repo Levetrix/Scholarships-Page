@@ -463,7 +463,7 @@ dd {
 .wrapper form span {
   display: inline-block;
   margin: 0.5775rem 2.93rem;
-  max-width: 39.52rem;
+  max-width: 22.44rem;
   line-height: 1.5em;
   font-size: 14px;
 }
@@ -476,7 +476,7 @@ dd {
 }
 /* line 173, ../sass/main.scss */
 .wrapper form span#contact a {
-  /*display:block; Luke changed 2014-12-12*/
+  /*display:block;*/
   margin-top: .5rem;
 }
 /* line 180, ../sass/main.scss */
@@ -625,4 +625,17 @@ li.ui-menu-item:hover {
   background: white;
   color: #555;
   cursor: pointer;
+}
+
+/*	Correct is.byu.edu css things	*/
+/* line 334, ../sass/main.scss */
+#course {
+  background-color: transparent !important;
+  font-size: 1.15em;
+  min-height: 2.31rem;
+  height: 2.31rem;
+  border: 1px solid #aaa !important;
+  margin-right: auto;
+  border-radius: 0 !important;
+  width: 100% !important;
 }

@@ -171,7 +171,7 @@ dd { padding: 0 0 .75em 1em }
 			color:#666;
 			
 			& a {
-				display:block;
+				/*display:block;*/
 				margin-top:.5rem;
 			}
 		}
@@ -330,9 +330,17 @@ li.ui-menu-item{
 
 
 
-
-
-
+/*	Correct is.byu.edu css things	*/
+#course {
+	background-color: transparent !important;
+	font-size: 1.15em;
+	min-height: 2.31rem;
+	height: 2.31rem;
+	border: 1px solid #aaa !important;
+	margin-right: auto;
+	border-radius: 0 !important;
+	width: 100% !important;
+}
 
 
 
