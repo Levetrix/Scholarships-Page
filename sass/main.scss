@@ -223,7 +223,7 @@ dd { padding: 0 0 .75em 1em }
 	& > div {
 		//background-color: rgba($red,.3);
 		width:$half;
-		max-height:4rem;
+		/*max-height:4rem;*/
 		overflow:visible;
 		margin:#{$med-gutter/6} #{$med-gutter/2};
 		display:inline-block;

@@ -524,7 +524,7 @@ dd {
 /* line 223, ../sass/main.scss */
 .wrapper form > div {
   width: 22.44rem;
-  max-height: 4rem;
+  /*max-height:4rem;*/
   overflow: visible;
   margin: 0.97667rem 2.93rem;
   display: inline-block;
