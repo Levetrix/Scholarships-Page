@@ -8,7 +8,7 @@
 		<script src="js/vendor/jquery-ui-1.11.0.js"> </script>
 	<link rel="stylesheet" href="js/jquery-ui/jquery-ui.theme.css" type="text/css" />
 	<link rel="stylesheet" href="stylesheets/main.css" type="text/css" />
-	<nmeta http-equiv="refresh" content="0; url=scholarship-apply.cfm"  />
+	<meta http-equiv="refresh" content="0; url=scholarship-apply.cfm"  />
 </head>
 <body>
 	<div class="wrapper" id="content">
@@ -89,13 +89,15 @@
 			<h2>Student Information</h2>
 			<div>
 				<h4>Student BYU Net ID:</h4>
-				<input type="text" placeholder="Student123" name="identity" id="netID" required="required" /><br /><br />
+				<input type="text" placeholder="Student123" name="net_id" id="netID" required="required" /><br /><br />
 				If your student does not have a net ID, create one <a href="/o2/index.cfm?event=public.CreateNetID&amp;loginService=iscounselor" target="_blank">here</a>.
 				<!--<a href="/o2/index.cfm?event=public.CreateNetID&amp;loginService=iscounselor" target="_blank" class="button" style="float:right;margin-top:0.25em;">Create Net ID</a>-->
+				<h4>Student Full Name:</h4>
+				<input type="text" placeholder="Jane Doe" name="identity" id="fullname" required="required" />
 			</div> 
 			<div>
 				<h4>Course:</h4>
-				<input type="text" placeholder="ACCOUNTING: ACC-041" name="course" id="course" required="required" />
+				<input type="text" placeholder="ACCOUNTING: ACC-041" name="course" id="course-select-application" required="required" />
 				<input type="hidden" name="course_shorttitle" id="hidden-course" value="unknown" />
 			</div>
 			<div class="GPA">
